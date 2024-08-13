@@ -73,7 +73,7 @@ app.get('/usuarios/:id', async (req,res) => {
 app.delete('/usuarios/:id', async (req,res) => {
     try{
         const userId = req.params.id
-        await usuariosCollection.doc(UserId).delete()
+        await usuariosCollection.doc(userId).delete()
         res.status(200).json({
             message: 'El usuario fue borrado exitosamente'
         })
